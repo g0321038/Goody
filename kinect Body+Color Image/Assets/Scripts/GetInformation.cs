@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Kinect = Windows.Kinect;
 
-public class GetJointPosition : MonoBehaviour
+public class GetInformation : MonoBehaviour
 {
     public GameObject BodySourceManager;
     public Camera ConvertCamera;
