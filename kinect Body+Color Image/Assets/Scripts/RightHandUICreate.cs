@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class RightHandUICreate : MonoBehaviour
 {
-    public GameObject Master;
+    //public GameObject Master;
 
     private int jointcount = 11;
     private Vector3 JointPosition = new Vector3(0, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject Master = GameObject.Find("Master"); 
         JointPosition = Master.GetComponent<GetInformation>().GetPosition(jointcount);
 
         //Debug.Log(JointPosition);

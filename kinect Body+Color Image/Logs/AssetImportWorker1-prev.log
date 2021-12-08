@@ -15,7 +15,7 @@ C:/GitHub/game/kinect Body+Color Image
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-56221
+56276
 Successfully changed project path to: C:/GitHub/game/kinect Body+Color Image
 C:/GitHub/game/kinect Body+Color Image
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/GitHub/game/kinect Body+Color Image
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 79.02 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 78.44 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.1f1 (c20c6d589440)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -63,75 +63,75 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2021.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2021.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2021.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2021.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005815 seconds.
+Registered in 0.005623 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 75.92 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 73.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.863 seconds
+- Completed reload, in  0.830 seconds
 Domain Reload Profiling:
-	ReloadAssembly (863ms)
+	ReloadAssembly (831ms)
 		BeginReloadAssembly (76ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (454ms)
+		EndReloadAssembly (436ms)
 			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (100ms)
+			SetupTypeCache (106ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (274ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (250ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (76ms)
+				RefreshPlugins (73ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (131ms)
-				ProcessInitializeOnLoadMethodAttributes (59ms)
+				ProcessInitializeOnLoadAttributes (122ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006731 seconds.
+Registered in 0.006509 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.70 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.070 seconds
+- Completed reload, in  1.065 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1071ms)
-		BeginReloadAssembly (183ms)
+	ReloadAssembly (1065ms)
+		BeginReloadAssembly (176ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (795ms)
-			LoadAssemblies (77ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (793ms)
+			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (229ms)
+			SetupTypeCache (226ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (346ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (341ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (79ms)
-				ProcessInitializeOnLoadAttributes (223ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
+				ProcessInitializeOnLoadAttributes (219ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
 				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -140,12 +140,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3182 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 26 unused Assets / (55.9 KB). Loaded Objects now: 3654.
 Memory consumption went from 127.1 MB to 127.0 MB.
-Total: 2.963500 ms (FindLiveObjects: 0.279600 ms CreateObjectMapping: 0.201900 ms MarkObjects: 2.375400 ms  DeleteObjects: 0.105500 ms)
+Total: 3.143300 ms (FindLiveObjects: 0.290800 ms CreateObjectMapping: 0.239700 ms MarkObjects: 2.531800 ms  DeleteObjects: 0.079800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,13 +159,37 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1975425.159375 seconds.
-  path: Assets/Standard Assets
-  artifactKey: Guid(a1a56fe79b641554da9d15cb676cd8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets using Guid(a1a56fe79b641554da9d15cb676cd8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f9697a2ff9ba5cb57fb5dc5d14521a5') in 0.010454 seconds 
+  Time since last request: 1976320.900383 seconds.
+  path: Assets/Octahedron Sphere/Meshes/Diameter 1/Octahedron Sphere 1 D1.asset
+  artifactKey: Guid(db86ace5a7eef43fbb4f640b76550db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Octahedron Sphere/Meshes/Diameter 1/Octahedron Sphere 1 D1.asset using Guid(db86ace5a7eef43fbb4f640b76550db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e53d4017c9de48ff42b8bb9b9642d5') in 0.136797 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Plugins
-  artifactKey: Guid(16b6672bde1072a44bc8a8003d09f789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins using Guid(16b6672bde1072a44bc8a8003d09f789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46c1a6e673301843c9be5f259ffdc9cf') in 0.006295 seconds 
+  Time since last request: 0.000024 seconds.
+  path: Assets/Octahedron Sphere/Meshes/Diameter 1/Octahedron Sphere 5 D1.asset
+  artifactKey: Guid(e66309d7cf6f548dbbe7c3d84c3abc9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Octahedron Sphere/Meshes/Diameter 1/Octahedron Sphere 5 D1.asset using Guid(e66309d7cf6f548dbbe7c3d84c3abc9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508d4d6d541c1c511936ef0a558c8155') in 0.022591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Octahedron Sphere/Meshes/Diameter 1/Octahedron Sphere 2 D1.asset
+  artifactKey: Guid(1f143687ae3dc4eeea3d55a957814f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Octahedron Sphere/Meshes/Diameter 1/Octahedron Sphere 2 D1.asset using Guid(1f143687ae3dc4eeea3d55a957814f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff5167122cd14e6af132f5174e32ace2') in 0.019082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.251655 seconds.
+  path: Assets/Octahedron Sphere/Meshes/Radius 1/Octahedron Sphere 1 R1.asset
+  artifactKey: Guid(67848531d3def4e4aad9d084138baf9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Octahedron Sphere/Meshes/Radius 1/Octahedron Sphere 1 R1.asset using Guid(67848531d3def4e4aad9d084138baf9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed9fdc1b9c103dd87ee9591c3afbdc85') in 0.027881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Octahedron Sphere/Meshes/Radius 1/Octahedron Sphere 3 R1.asset
+  artifactKey: Guid(84faa0db992f54e9da6f2721a7920c95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Octahedron Sphere/Meshes/Radius 1/Octahedron Sphere 3 R1.asset using Guid(84faa0db992f54e9da6f2721a7920c95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '733f231d5ca684aa66b1a3e9d04f96a8') in 0.017724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Octahedron Sphere/Meshes/Radius 1/Octahedron Sphere 6 R1.asset
+  artifactKey: Guid(25286070226fb4ea39d2976d03cec3c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Octahedron Sphere/Meshes/Radius 1/Octahedron Sphere 6 R1.asset using Guid(25286070226fb4ea39d2976d03cec3c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7c8acb3d72e61a35aeb88ce503c8abb') in 0.038354 seconds 

@@ -15,10 +15,16 @@ public class GetInformation : MonoBehaviour
     private int _KinectHeight = 1080;
 
     private Vector3[] PositionArray = new Vector3[25];
+    private bool Tracked = false;
 
     public Vector3 GetPosition(int jointcount)
     {
         return PositionArray[jointcount];
+    }
+
+    public bool GetTracked()
+    {
+        return Tracked;
     }
 
     // Start is called before the first frame update
@@ -64,6 +70,8 @@ public class GetInformation : MonoBehaviour
 
             if (body.IsTracked)
             {
+                Tracked = true;
+
                 for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
                 {
                     Kinect.Joint TargetJoint = body.Joints[jt];
