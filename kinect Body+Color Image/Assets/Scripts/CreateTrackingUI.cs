@@ -6,7 +6,7 @@ public class CreateTrackingUI : MonoBehaviour
 {
     private GameObject obj;
     private GameObject Master;
-    private object UI;
+    private bool Flag = true;
     // 初期化
     void Start()
     {
@@ -18,13 +18,16 @@ public class CreateTrackingUI : MonoBehaviour
 
     void Update()
     {
-        GameObject Master = GameObject.Find("Master");
+        //ボディトラッキングされているかいないか
+
         bool Tracked = Master.GetComponent<GetInformation>().GetTracked();
+        
         if (Tracked == true)
         {
-            if (UI != null)
+            if (Flag == true)
             {
-                UI = Instantiate(obj, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+                Instantiate(obj, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+                Flag = false;
             }
         }
     }
