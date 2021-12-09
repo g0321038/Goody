@@ -14,7 +14,6 @@ public class ColorBodySourceView : MonoBehaviour
     private BodySourceManager _BodyManager;
 
     private Kinect.CoordinateMapper _CoordinateMapper;
-
     private int _KinectWidth = 1920;
     private int _KinectHeight = 1080;
 
@@ -107,7 +106,7 @@ public class ColorBodySourceView : MonoBehaviour
 
         foreach (var body in data)
         {
-            if (body == null)
+            if(body == null)
             {
                 continue;
             }
@@ -166,19 +165,6 @@ public class ColorBodySourceView : MonoBehaviour
             
             Transform jointObj = bodyObject.transform.Find(jt.ToString());
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
-
-            //if (jt == Kinect.JointType.HandRight)
-            //{
-            //    //Debug.Log("座標表示するジョイントタイプ名 = " + jt.ToString());
-            //    //Debug.Log("ジョイントの座標　= " + jointObj.localPosition);
-            //    var HandRightPositon = new Vector3(0, 0, 0);
-            //    HandRightPositon = jointObj.localPosition;
-            //    Debug.Log(HandRightPositon);
-            //    if ((HandRightPositon.x >= 4 && HandRightPositon.x <= 6) && (HandRightPositon.y >= 3 && HandRightPositon.y <= 4))
-            //    {
-            //        SceneManager.LoadScene("Result");
-            //    }
-            //}
 
             LineRenderer lr = jointObj.GetComponent<LineRenderer>();
             if(targetJoint.HasValue)
@@ -247,7 +233,7 @@ public class ColorBodySourceView : MonoBehaviour
         Transform jointObj = bodyObject.transform.Find(jt.ToString());
         var positon = new Vector3(0, 0, 0);
         positon = jointObj.localPosition;
-        //Debug.Log(positon);
+
         if ((positon.x >= 4 && positon.x <= 6) && (positon.y >= 3 && positon.y <= 4))
         {
             return true;
