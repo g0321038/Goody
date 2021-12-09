@@ -143,6 +143,7 @@ public class ColorBodySourceView : MonoBehaviour
             //lr.SetWidth(0.05f, 0.05f);
             lr.startWidth = 0.05f;
             lr.endWidth = 0.05f;
+
             jointObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             jointObj.name = jt.ToString();
             jointObj.transform.parent = body.transform;
@@ -164,11 +165,15 @@ public class ColorBodySourceView : MonoBehaviour
             }
             
             Transform jointObj = bodyObject.transform.Find(jt.ToString());
+
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
+            //jointObj.transform.position = GetVector3FromJoint(sourceJoint);
 
             LineRenderer lr = jointObj.GetComponent<LineRenderer>();
             if(targetJoint.HasValue)
             {
+                Debug.Log(GetVector3FromJoint(sourceJoint));
+
                 lr.SetPosition(0, jointObj.localPosition);
                 lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
                 //lr.SetColors(GetColorForState (sourceJoint.TrackingState), GetColorForState(targetJoint.Value.TrackingState));
@@ -231,10 +236,10 @@ public class ColorBodySourceView : MonoBehaviour
     private bool TouchArea(Kinect.Body body, GameObject bodyObject, Kinect.JointType jt)
     {
         Transform jointObj = bodyObject.transform.Find(jt.ToString());
-        var positon = new Vector3(0, 0, 0);
-        positon = jointObj.localPosition;
-
-        if ((positon.x >= 4 && positon.x <= 6) && (positon.y >= 3 && positon.y <= 4))
+        var position = new Vector3(0, 0, 0);
+        position = jointObj.localPosition;
+        //Debug.Log(position);
+        if ((position.x >= 4 && position.x <= 6) && (position.y >= 3 && position.y <= 4))
         {
             return true;
         }
