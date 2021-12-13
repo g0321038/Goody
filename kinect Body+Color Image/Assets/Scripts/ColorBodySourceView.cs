@@ -9,6 +9,7 @@ public class ColorBodySourceView : MonoBehaviour
     public Material BoneMaterial;
     public GameObject BodySourceManager;
     public Camera ConvertCamera;
+    public float nowtime;
 
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
     private BodySourceManager _BodyManager;
@@ -16,6 +17,9 @@ public class ColorBodySourceView : MonoBehaviour
     private Kinect.CoordinateMapper _CoordinateMapper;
     private int _KinectWidth = 1920;
     private int _KinectHeight = 1080;
+
+    private float counttime;
+    private int countflag;
 
     public Dictionary<ulong, GameObject> GetBodies()
     {
@@ -53,9 +57,16 @@ public class ColorBodySourceView : MonoBehaviour
         { Kinect.JointType.SpineShoulder, Kinect.JointType.Neck },
         { Kinect.JointType.Neck, Kinect.JointType.Head },
     };
+
+    void Start()
+    {
+        nowtime = 0;
+    }
     
     void Update () 
     {
+        nowtime += Time.deltaTime;
+
         if (BodySourceManager == null)
         {
             return;
@@ -121,7 +132,26 @@ public class ColorBodySourceView : MonoBehaviour
                 RefreshBodyObject(body, _Bodies[body.TrackingId]);
                 if (TouchArea(body, _Bodies[body.TrackingId], Kinect.JointType.HandRight))
                 {
-                    SceneManager.LoadScene("Result");
+                    if(countflag == 0)
+                    {
+                        counttime = 0;
+                        countflag = 1;
+                    }
+                    else
+                    {
+                        counttime += Time.deltaTime;
+                    }
+                    
+                    if(counttime >= 3.0)
+                    {
+                        SceneManager.LoadScene("Result");
+                    }
+
+                    Debug.Log(counttime);
+                }
+                else
+                {
+                    countflag = 0;
                 }
             }
         }
@@ -143,6 +173,7 @@ public class ColorBodySourceView : MonoBehaviour
             //lr.SetWidth(0.05f, 0.05f);
             lr.startWidth = 0.05f;
             lr.endWidth = 0.05f;
+
             jointObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             jointObj.name = jt.ToString();
             jointObj.transform.parent = body.transform;
@@ -164,11 +195,15 @@ public class ColorBodySourceView : MonoBehaviour
             }
             
             Transform jointObj = bodyObject.transform.Find(jt.ToString());
+
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
+            //jointObj.transform.position = GetVector3FromJoint(sourceJoint);
 
             LineRenderer lr = jointObj.GetComponent<LineRenderer>();
             if(targetJoint.HasValue)
             {
+                //Debug.Log(GetVector3FromJoint(sourceJoint));
+
                 lr.SetPosition(0, jointObj.localPosition);
                 lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
                 //lr.SetColors(GetColorForState (sourceJoint.TrackingState), GetColorForState(targetJoint.Value.TrackingState));
@@ -231,11 +266,13 @@ public class ColorBodySourceView : MonoBehaviour
     private bool TouchArea(Kinect.Body body, GameObject bodyObject, Kinect.JointType jt)
     {
         Transform jointObj = bodyObject.transform.Find(jt.ToString());
-        var positon = new Vector3(0, 0, 0);
-        positon = jointObj.localPosition;
+        var position = new Vector3(0, 0, 0);
+        position = jointObj.localPosition;
+        //Debug.Log(position);
 
-        if ((positon.x >= 4 && positon.x <= 6) && (positon.y >= 3 && positon.y <= 4))
+        if ((position.x >= 4 && position.x <= 6) && (position.y >= 3 && position.y <= 4))
         {
+
             return true;
         }
         else
