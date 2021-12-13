@@ -15,7 +15,9 @@ C:/GitHub/game/kinect Body+Color Image
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+
 51810
+
 Successfully changed project path to: C:/GitHub/game/kinect Body+Color Image
 C:/GitHub/game/kinect Body+Color Image
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +49,9 @@ C:/GitHub/game/kinect Body+Color Image
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+
 Refreshing native plugins compatible for Editor in 100.10 ms, found 4 plugins.
+
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.1f1 (c20c6d589440)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -63,6 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2021.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2021.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2021.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -75,12 +80,14 @@ Mono: successfully reloaded assembly
 - Completed reload, in  1.019 seconds
 Domain Reload Profiling:
 	ReloadAssembly (1020ms)
+
 		BeginReloadAssembly (88ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+
 		EndReloadAssembly (481ms)
 			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -95,17 +102,21 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (130ms)
 				ProcessInitializeOnLoadMethodAttributes (54ms)
+
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+
 Registered in 0.008366 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 91.96 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -113,21 +124,27 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1358ms)
 		BeginReloadAssembly (187ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (21ms)
 		EndReloadAssembly (1063ms)
 			LoadAssemblies (100ms)
+
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (266ms)
 			ReleaseScriptCaches (1ms)
+
 			RebuildScriptCaches (65ms)
 			SetupLoadedEditorAssemblies (484ms)
+
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
+
 				RefreshPlugins (92ms)
 				BeforeProcessingInitializeOnLoad (95ms)
 				ProcessInitializeOnLoadAttributes (254ms)
@@ -147,6 +164,7 @@ Unloading 27 unused Assets / (386.1 KB). Loaded Objects now: 4349.
 Memory consumption went from 166.1 MB to 165.7 MB.
 Total: 3.074100 ms (FindLiveObjects: 0.322700 ms CreateObjectMapping: 0.244000 ms MarkObjects: 2.281900 ms  DeleteObjects: 0.224400 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -158,6 +176,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.006727 seconds.
@@ -279,10 +298,12 @@ AssetImportParameters requested are different than current active one (requested
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.007501 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.47 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -290,10 +311,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1642ms)
 		BeginReloadAssembly (434ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (29ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (227ms)
 		EndReloadAssembly (1073ms)
 			LoadAssemblies (144ms)
@@ -377,6 +400,7 @@ Unloading 23 unused Assets / (404.3 KB). Loaded Objects now: 4357.
 Memory consumption went from 162.2 MB to 161.8 MB.
 Total: 5.055600 ms (FindLiveObjects: 0.499400 ms CreateObjectMapping: 0.385200 ms MarkObjects: 3.790500 ms  DeleteObjects: 0.378600 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -388,13 +412,22 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 70.374433 seconds.
+  path: Assets/Resources/RightHand.prefab
+  artifactKey: Guid(ec5b52a79fff23f42bd4d77f5e426ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/RightHand.prefab using Guid(ec5b52a79fff23f42bd4d77f5e426ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adefd975e917b6b1b0f397f3ec1ecb39') in 0.060548 seconds 
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006963 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -402,10 +435,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1422ms)
 		BeginReloadAssembly (173ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (41ms)
 		EndReloadAssembly (1112ms)
 			LoadAssemblies (124ms)
@@ -433,6 +468,7 @@ Unloading 23 unused Assets / (404.3 KB). Loaded Objects now: 4359.
 Memory consumption went from 162.2 MB to 161.8 MB.
 Total: 3.269200 ms (FindLiveObjects: 0.324700 ms CreateObjectMapping: 0.231000 ms MarkObjects: 2.448400 ms  DeleteObjects: 0.263700 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -446,11 +482,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006887 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.69 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -962,10 +1001,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1262ms)
 		BeginReloadAssembly (151ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (35ms)
 		EndReloadAssembly (1004ms)
 			LoadAssemblies (105ms)
@@ -993,6 +1034,7 @@ Unloading 23 unused Assets / (380.5 KB). Loaded Objects now: 4379.
 Memory consumption went from 162.2 MB to 161.9 MB.
 Total: 3.358600 ms (FindLiveObjects: 0.389600 ms CreateObjectMapping: 0.289300 ms MarkObjects: 2.422400 ms  DeleteObjects: 0.255600 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1004,13 +1046,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.006970 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.25 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1018,10 +1063,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1263ms)
 		BeginReloadAssembly (145ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (36ms)
 		EndReloadAssembly (1008ms)
 			LoadAssemblies (97ms)
@@ -1030,24 +1077,29 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (61ms)
 			SetupLoadedEditorAssemblies (406ms)
+
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
+
 				BeforeProcessingInitializeOnLoad (85ms)
 				ProcessInitializeOnLoadAttributes (266ms)
 				ProcessInitializeOnLoadMethodAttributes (27ms)
+
 				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
+
 Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3820 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (372.7 KB). Loaded Objects now: 4381.
 Memory consumption went from 162.2 MB to 161.9 MB.
 Total: 3.690200 ms (FindLiveObjects: 0.328200 ms CreateObjectMapping: 0.261000 ms MarkObjects: 2.773800 ms  DeleteObjects: 0.325900 ms)
+
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -1062,11 +1114,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006957 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.82 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1074,10 +1129,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1323ms)
 		BeginReloadAssembly (152ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (34ms)
 		EndReloadAssembly (1060ms)
 			LoadAssemblies (105ms)
@@ -1105,6 +1162,7 @@ Unloading 23 unused Assets / (404.2 KB). Loaded Objects now: 4383.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 3.958200 ms (FindLiveObjects: 0.357100 ms CreateObjectMapping: 0.315700 ms MarkObjects: 3.003500 ms  DeleteObjects: 0.280400 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1118,11 +1176,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.007010 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.51 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1130,10 +1191,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1280ms)
 		BeginReloadAssembly (148ms)
+
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (33ms)
 		EndReloadAssembly (1017ms)
 			LoadAssemblies (95ms)
@@ -1161,6 +1224,7 @@ Unloading 23 unused Assets / (372.7 KB). Loaded Objects now: 4385.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 3.468300 ms (FindLiveObjects: 0.345500 ms CreateObjectMapping: 0.233000 ms MarkObjects: 2.628400 ms  DeleteObjects: 0.260100 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1174,11 +1238,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006881 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1186,10 +1253,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1295ms)
 		BeginReloadAssembly (133ms)
+
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (36ms)
 		EndReloadAssembly (1047ms)
 			LoadAssemblies (103ms)
@@ -1198,10 +1267,12 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (2ms)
 			RebuildScriptCaches (58ms)
 			SetupLoadedEditorAssemblies (420ms)
+
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
+
 				BeforeProcessingInitializeOnLoad (87ms)
 				ProcessInitializeOnLoadAttributes (278ms)
 				ProcessInitializeOnLoadMethodAttributes (31ms)
@@ -1217,6 +1288,7 @@ Unloading 23 unused Assets / (380.8 KB). Loaded Objects now: 4387.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 3.822000 ms (FindLiveObjects: 0.372000 ms CreateObjectMapping: 0.302400 ms MarkObjects: 2.874800 ms  DeleteObjects: 0.271600 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1230,11 +1302,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006761 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1284,6 +1359,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+
 Received Import Request.
   Time since last request: 17355.076754 seconds.
   path: Assets/Scripts/CreateTrackingUI.cs
@@ -1311,10 +1387,12 @@ Start importing Assets/Scripts/ColorBodySourceView.cs using Guid(09f308077d49c98
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.006922 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.48 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1334,9 +1412,11 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (50ms)
 			SetupLoadedEditorAssemblies (432ms)
+
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (1ms)
+
 				RefreshPlugins (2ms)
 				BeforeProcessingInitializeOnLoad (88ms)
 				ProcessInitializeOnLoadAttributes (289ms)
@@ -1353,6 +1433,7 @@ Unloading 23 unused Assets / (372.8 KB). Loaded Objects now: 4391.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 3.182300 ms (FindLiveObjects: 0.320800 ms CreateObjectMapping: 0.248300 ms MarkObjects: 2.382200 ms  DeleteObjects: 0.230100 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1364,13 +1445,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.006918 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 0.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1378,10 +1462,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1379ms)
 		BeginReloadAssembly (168ms)
+
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (43ms)
 		EndReloadAssembly (1083ms)
 			LoadAssemblies (110ms)
@@ -1409,6 +1495,7 @@ Unloading 23 unused Assets / (372.8 KB). Loaded Objects now: 4393.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 5.296100 ms (FindLiveObjects: 0.388600 ms CreateObjectMapping: 0.565800 ms MarkObjects: 4.055900 ms  DeleteObjects: 0.284200 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1422,11 +1509,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006775 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1465,6 +1555,7 @@ Unloading 23 unused Assets / (372.9 KB). Loaded Objects now: 4395.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 3.284500 ms (FindLiveObjects: 0.319700 ms CreateObjectMapping: 0.328600 ms MarkObjects: 2.391000 ms  DeleteObjects: 0.244100 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1478,11 +1569,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+
 Registered in 0.006892 seconds.
+
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitHub\game\kinect Body+Color Image\Library\PackageCache\com.unity.visualscripting@1.7.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+
 Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -1490,10 +1584,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1342ms)
 		BeginReloadAssembly (148ms)
+
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+
 			CreateAndSetChildDomain (34ms)
 		EndReloadAssembly (1057ms)
 			LoadAssemblies (107ms)
@@ -1521,6 +1617,7 @@ Unloading 23 unused Assets / (404.5 KB). Loaded Objects now: 4397.
 Memory consumption went from 162.3 MB to 161.9 MB.
 Total: 4.186900 ms (FindLiveObjects: 0.608700 ms CreateObjectMapping: 0.538500 ms MarkObjects: 2.746000 ms  DeleteObjects: 0.292300 ms)
 
+
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1532,6 +1629,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+
 Received Import Request.
   Time since last request: 1230.406381 seconds.
   path: Assets/Scripts/CameraMover.cs
@@ -1543,3 +1641,4 @@ Received Import Request.
   path: Assets/Scenes/360image.unity
   artifactKey: Guid(8bfd32bc63ab7614381581fc155eacb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/360image.unity using Guid(8bfd32bc63ab7614381581fc155eacb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b85bfd7c9ae061982959962c1a6e7a3') in 0.030651 seconds 
+
