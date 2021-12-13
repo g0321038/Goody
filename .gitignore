@@ -49,6 +49,6 @@ Thumbs.db
 
 # for others   
 
-*.log #log files, for some plugins
+*.log
 *.pyc #python bytecode cache, for some plugins.
 sysinfo.txt #Unity3D Generated File On Crash Reports
