@@ -9,6 +9,7 @@ public class ColorBodySourceView : MonoBehaviour
     public Material BoneMaterial;
     public GameObject BodySourceManager;
     public Camera ConvertCamera;
+    public float nowtime;
 
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
     private BodySourceManager _BodyManager;
@@ -16,6 +17,9 @@ public class ColorBodySourceView : MonoBehaviour
     private Kinect.CoordinateMapper _CoordinateMapper;
     private int _KinectWidth = 1920;
     private int _KinectHeight = 1080;
+
+    private float counttime;
+    private int countflag;
 
     public Dictionary<ulong, GameObject> GetBodies()
     {
@@ -53,9 +57,16 @@ public class ColorBodySourceView : MonoBehaviour
         { Kinect.JointType.SpineShoulder, Kinect.JointType.Neck },
         { Kinect.JointType.Neck, Kinect.JointType.Head },
     };
+
+    void Start()
+    {
+        nowtime = 0;
+    }
     
     void Update () 
     {
+        nowtime += Time.deltaTime;
+
         if (BodySourceManager == null)
         {
             return;
@@ -121,7 +132,26 @@ public class ColorBodySourceView : MonoBehaviour
                 RefreshBodyObject(body, _Bodies[body.TrackingId]);
                 if (TouchArea(body, _Bodies[body.TrackingId], Kinect.JointType.HandRight))
                 {
-                    SceneManager.LoadScene("Result");
+                    if(countflag == 0)
+                    {
+                        counttime = 0;
+                        countflag = 1;
+                    }
+                    else
+                    {
+                        counttime += Time.deltaTime;
+                    }
+                    
+                    if(counttime >= 3.0)
+                    {
+                        SceneManager.LoadScene("Result");
+                    }
+
+                    Debug.Log(counttime);
+                }
+                else
+                {
+                    countflag = 0;
                 }
             }
         }
@@ -172,7 +202,7 @@ public class ColorBodySourceView : MonoBehaviour
             LineRenderer lr = jointObj.GetComponent<LineRenderer>();
             if(targetJoint.HasValue)
             {
-                Debug.Log(GetVector3FromJoint(sourceJoint));
+                //Debug.Log(GetVector3FromJoint(sourceJoint));
 
                 lr.SetPosition(0, jointObj.localPosition);
                 lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
@@ -239,8 +269,10 @@ public class ColorBodySourceView : MonoBehaviour
         var position = new Vector3(0, 0, 0);
         position = jointObj.localPosition;
         //Debug.Log(position);
+
         if ((position.x >= 4 && position.x <= 6) && (position.y >= 3 && position.y <= 4))
         {
+
             return true;
         }
         else
