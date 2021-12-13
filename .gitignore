@@ -36,9 +36,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# ============ #
-# OS generated #
-# ============ #
+
+# OS generated 
 .DS_Store
 .DS_Store?
 ._*
@@ -48,9 +47,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# ============ #
-# for others   #
-# ============ #
+# for others   
 
 *.log #log files, for some plugins
 *.pyc #python bytecode cache, for some plugins.
