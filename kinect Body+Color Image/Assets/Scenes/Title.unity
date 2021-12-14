@@ -217,8 +217,8 @@ GameObject:
   m_Component:
   - component: {fileID: 159821062}
   - component: {fileID: 159821063}
-  - component: {fileID: 159821065}
   - component: {fileID: 159821064}
+  - component: {fileID: 159821065}
   - component: {fileID: 159821066}
   m_Layer: 0
   m_Name: Master
@@ -275,11 +275,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 159821060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c388738995050324c902848ad42a4f74, type: 3}
+  m_Script: {fileID: 11500000, guid: ebe361b4a60413c48a0748f8f1306f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BodySourceManager: {fileID: 159821060}
-  ConvertCamera: {fileID: 4932499}
+  _BodySourceManager: {fileID: 159821064}
 --- !u!114 &159821066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,9 +288,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 159821060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe361b4a60413c48a0748f8f1306f5c, type: 3}
+  m_Script: {fileID: 11500000, guid: c388738995050324c902848ad42a4f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BodySourceManager: {fileID: 159821060}
+  ConvertCamera: {fileID: 4932499}
 --- !u!1 &373752430
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,13 @@ public class BodySourceManager : MonoBehaviour
             return _Sensor;
         }
     }
+    //地面の傾きをBodyFrameReade.FloorClipPlaneで取得するため値の取得
+    public Windows.Kinect.Vector4 FloorClipPlane
+    {
+        get;
+        private set;
+    }
+    //---------------------------------------------------------------
 
     void Start () 
     {
@@ -48,7 +55,10 @@ public class BodySourceManager : MonoBehaviour
                 }
                 
                 frame.GetAndRefreshBodyData(_Data);
-                
+
+                //FloorClipPlaneを取得する
+                FloorClipPlane = frame.FloorClipPlane;
+
                 frame.Dispose();
                 frame = null;
             }
