@@ -147,7 +147,7 @@ public class ColorBodySourceView : MonoBehaviour
                         SceneManager.LoadScene("Result");
                     }
 
-                    Debug.Log(counttime);
+                    //Debug.Log(counttime);
                 }
                 else
                 {
