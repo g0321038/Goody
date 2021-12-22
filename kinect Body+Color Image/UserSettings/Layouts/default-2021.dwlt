@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1068.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 86
+  controlID: 47
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 87
+  controlID: 48
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 88
+  controlID: 49
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,33 +317,33 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resources/Images
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resources/Images
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\game\kinect Body+Color Image
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: aa630000
-    m_LastClickedID: 25514
-    m_ExpandedIDs: 000000009e630000a0630000a2630000a4630000a6630000a8630000aa630000ac630000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 7a640000
+    m_LastClickedID: 25722
+    m_ExpandedIDs: 000000005a6400005c6400005e640000606400006464000066640000686400007a640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Images
-      m_OriginalName: Images
+      m_Name: Quiz
+      m_OriginalName: Quiz
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26220
+      m_UserData: 25742
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e630000a0630000a2630000a4630000a6630000a8630000aa630000ac630000
+    m_ExpandedIDs: 000000005a6400005c6400005e6400006064000062640000646400006664000068640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,7 +388,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300001a4e010000000000
+    m_ExpandedInstanceIDs: c62300001a4e0100000000001e650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,20 +488,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 063cfaff4e3ffaff4a40faffd645faffd84bfaff2c4efaff6057faff085bfaff8c5cfaff146ffaff527afaffaa97faffcaa2faffc6ddfaffe614fcffee18fcff541bfcffc82bfcff6835fcfffec1fcff46c2fcff6606fdfffa0afdff421dfdffaea2fdff82a6fdff16befdff64ccfdffd8ccfdffc2cffdfff0d0fdff56d7fdff82d8fdff3edbfdffb6dbfdff66e0fdffb4e0fdffe4e0fdff14e1fdff44e1fdff74e1fdffa4e1fdffd4e1fdff0ce2fdff56eafdfffeebfdfffeedfdff4afafdff7e31feff3238feff364afeff704dfeff3c50feff7a55feffb667feff30b5feff56b5feffdab8feff8cfcfeffbe38ffff803affff4e3dffffd244ffffbc6affff066dfffffe7affff9891ffffa29cffff0aecffff94efffff6af5ffff2cfbfffff25f0000626c0000746c0000926c0000a46c000054cc000086cc000014d1000030d10000bafa0000ecfa00004202010040260100a8260100d6350100d0370100f0370100a43c0100463e0100f04d0100a64f01002a5201008e520100d4520100ca6901006a72010006730100c0750100da7501006e77010088770100207d01003c7d01002a81010004890100348901008e8c0100a88c0100128e0100f6960100129f0100389f0100
+      m_SelectedIDs: 907b0000
+      m_LastClickedID: 31632
+      m_ExpandedIDs: c64dfffff05bffff5862ffff8a71ffffe272fffff278ffffbc7effff1c7fffffe69dffff2e9effffd29fffff54a5ffff6ebdffff18d6ffff04d9ffff14dcffffa2eeffff2efbffff1668000056680000f86c0000d86e0000e86f00003a71000044710000a6720000cc7200008c730000bc7300006074000098740000d8740000e87400003c7900003a7a0000507b0000d07b0000347c00004e7c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Back_ModeSelect
-        m_OriginalName: Back_ModeSelect
+        m_Name: kinect_to_movie
+        m_OriginalName: kinect_to_movie
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 106246
+        m_UserData: 31696
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
