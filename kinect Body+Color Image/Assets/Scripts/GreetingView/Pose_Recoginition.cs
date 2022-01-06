@@ -36,7 +36,7 @@ public class Pose_Recoginition : MonoBehaviour
 
     //誤差
     //private Vector3 calculation = new Vector3(0.5f, 0.5f, 0);
-    private float cal = 0.4f;
+    private float cal = 0.6f;
 
     //各関節の位置の正誤判定用フラグ
     private bool HeadFlag; //jointcount:3
