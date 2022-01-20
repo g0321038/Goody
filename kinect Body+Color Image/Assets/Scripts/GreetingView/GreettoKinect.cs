@@ -8,15 +8,12 @@ public class GreettoKinect : MonoBehaviour
     //canvasと中のRawImageのリストをアタッチ
     public GameObject movie_canvas;
     public GameObject kinect_canvas;
-    public GameObject to_title_canvas;
+    //public GameObject to_title_canvas;
 
     public List<GameObject> country_movie;
 
     //動画リスト用のカウント
     public int count = 0;
-
-    //
-    private int leach = 0;
 
     //VideoPlayerコンポーネントを使用するため
     private VideoPlayer video;
@@ -38,7 +35,7 @@ public class GreettoKinect : MonoBehaviour
 
     void FinishPlayVideo(VideoPlayer vp)
     {
-        if (count >= 0 && count < 3)
+        if (count <= 2)
         {
             country_movie[count].SetActive(false);
             movie_canvas.SetActive(false);
@@ -47,29 +44,13 @@ public class GreettoKinect : MonoBehaviour
             country_movie[count + 1].GetComponent<VideoPlayer>().loopPointReached += FinishPlayVideo;
             count++;
         }
-        else if(count >= 3)
+        else if (count == 3)
         {
             country_movie[count].SetActive(false);
             movie_canvas.SetActive(false);
-            to_title_canvas.SetActive(true);
+            kinect_canvas.SetActive(true);
             count++;
         }
-
     }
-    //void FinishPlayVideo(VideoPlayer vp)
-    //{
-    //    Debug.Log("Video Stop");
-
-    //    if (count >= 0 && count < 3)
-    //    {
-    //        country_movie[count].SetActive(false);
-    //        count = count + 1;
-    //        country_movie[count].SetActive(true);
-    //    }
-    //    else if (count >= 3)
-    //    {
-    //        country_movie[count].SetActive(false);
-    //        movie_canvas.SetActive(false);
-    //    }
-    //}
+  
 }

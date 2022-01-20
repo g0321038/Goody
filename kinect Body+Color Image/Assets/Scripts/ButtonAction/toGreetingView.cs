@@ -11,8 +11,7 @@ public class toGreetingView : MonoBehaviour
     public void OnClick()
     {
         SceneManager.LoadScene("GreetingView");
-        //now_canvas.SetActive(false);
-        //next_canvas.SetActive(true);
+
     }
     // Start is called before the first frame update
     void Start()

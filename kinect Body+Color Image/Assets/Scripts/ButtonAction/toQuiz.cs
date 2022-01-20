@@ -10,7 +10,7 @@ public class toQuiz : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("QuizScene");
+        SceneManager.LoadScene("QuizGame1");
         //now_canvas.SetActive(false);
         //next_canvas.SetActive(true);
     }

@@ -15,7 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/ModeSelect.unity
     guid: 97326844c88ffc04090fe63ff5baa280
   - enabled: 1
-    path: Assets/Scenes/QuizScene.unity
+    path: Assets/Scenes/QuizGame1.unity
+    guid: 7fe41019895e89d45a7128fc15d682f3
+  - enabled: 0
+    path: Assets/Scenes/Sample/QuizScene.unity
     guid: d4742211969f23e4d9abf5eb8ae8ae62
   - enabled: 1
     path: Assets/Scenes/360image.unity

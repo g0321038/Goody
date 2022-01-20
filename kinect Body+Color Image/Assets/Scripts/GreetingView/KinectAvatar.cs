@@ -71,14 +71,14 @@ public class KinectAvatar : MonoBehaviour
             //トラッキングされなくなったら非表示へ
             _UnityChan.SetActive(false);
             ModelFlag = false;
-            Debug.Log("非表示へ");
+            //Debug.Log("非表示へ");
         }
         else if (TrackFlag == true && ModelFlag == false)
         {
             //トラッキングされたら表示へ
             _UnityChan.SetActive(true);
             ModelFlag = true;
-            Debug.Log("表示");
+            //Debug.Log("表示");
         }
         //-------------------------------------------------------------------------
 
