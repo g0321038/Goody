@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pose_Recoginition : MonoBehaviour
 {
@@ -11,6 +12,20 @@ public class Pose_Recoginition : MonoBehaviour
     public GameObject Text_HandLeft;
     public GameObject Text_ElowRight;
     public GameObject Text_ElowLeft;
+    public GameObject Button;
+    public GameObject ModeSelect;
+    public GameObject TimeText;
+    public GameObject ImageObj;
+
+    private int PoseNumber = 0;
+
+    //時間用変数
+    private float time = 0;
+    //ポーズができたときの時間
+    private float goodtime;
+    //タイムリミット
+    private float LimitTime = 60;
+    private int OutTime;
 
     //GetInformationで取得したジョイントのポジションを格納する配列
     private Vector3[] joint_position_array = new Vector3[25];
@@ -21,24 +36,15 @@ public class Pose_Recoginition : MonoBehaviour
     private Vector3[] joint_distance_array = new Vector3[25];
     private int Criteria = 1;
 
-    //各関節との相対距離の判別基準値 Vector3型 (気を付け)
-    private Vector3 distance_Head = new Vector3(0.085f, 3.2f, 0f);
-    private Vector3 distance_SholderRight = new Vector3(1.3f, 1.3f, 0f);
-    private Vector3 distance_SholderLeft = new Vector3(-1.3f, 1.3f, 0f);
-    private Vector3 distance_ElbowRight = new Vector3(1.55f, -0.6f, 0f);
-    private Vector3 distance_ElbowLeft = new Vector3(-1.55f, -0.6f, 0f);
-    private Vector3 distance_HandRight = new Vector3(1.5f, -2.6f, 0f);
-    private Vector3 distance_HandLeft = new Vector3(-1.5f, -2.6f, 0f);
-
-    //判別基準値のVector3型配列
-    private Vector3[] pose_standard_array = new Vector3[25];
-
+    //各関節との相対距離の判別基準値 Vector3型
+    private Vector3[] distinction_array = new Vector3[25];
 
     //誤差
     //private Vector3 calculation = new Vector3(0.5f, 0.5f, 0);
-    private float cal = 0.6f;
+    private float cal = 0.5f;
 
     //各関節の位置の正誤判定用フラグ
+    private bool GoodFlag = false;
     private bool HeadFlag; //jointcount:3
     private bool SholderRightFlag; //jointcount:8
     private bool SholderLeftFlag; //jointcount:4
@@ -50,152 +56,239 @@ public class Pose_Recoginition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pose_standard_array[3] = distance_Head;
-        pose_standard_array[9] = distance_ElbowRight;
-        pose_standard_array[5] = distance_ElbowLeft;
-        pose_standard_array[11] = distance_HandRight;
-        pose_standard_array[7] = distance_HandLeft;
+        goodtime = 100;
+        ChangeImage();
     }
 
     // Update is called once per frame
     void Update()
     {
+        OutTime = (int)LimitTime - (int)time;
+        time += Time.deltaTime;
+
         //各関節の位置を配列に格納する
         for (int jointcount = 0; jointcount < 25; jointcount++)
         {
             joint_position = GetInfo.GetComponent<GetInformation>().GetPosition(jointcount);
             joint_position_array[jointcount] = joint_position;
         }
-        //-----------------------------------------------------------------------------------------------------
 
         //各関節の位置と基準（SpineMid）位置の相対距離を計算し格納する
         for(int jointcount = 0; jointcount < 25; jointcount++)
         {
             joint_distance_array[jointcount] = joint_position_array[jointcount] - joint_position_array[Criteria];
         }
-        //------------------------------------------------------------------------------------------------------
 
-        //for (jointcount = 0; jointcount < 25; jointcount++)
-        //{
-        //    if( (joint_distance_array[jointcount].x >= pose_standard_array[jointcount] - cal) && (joint_distance_array[jointcount].x <= pose_standard_array[jointcount] + cal) )
-        //    {
-        //        if ( (joint_distance_array[jointcount].x >= pose_standard_array[jointcount] - cal) && (joint_distance_array[jointcount].x <= pose_standard_array[jointcount] + cal) )
-        //        {
 
-        //        }
-        //    }
-        //}
+        //Poseごとに関節の相対距離の基準値を決定する
+        Pose();
+        
+        //Poseの正誤判定とその処理
+        Pose_is_Good();
 
-        //正誤判定　Head 3
-        if( (joint_distance_array[3].x >= distance_Head.x - cal) && (joint_distance_array[3].x <= distance_Head.x + cal))
+        //Poseが正解した後の処理と時間切れ処理
+        timepast();
+
+        OutputTime();
+
+        //Debug.Log("PoseNumber = " + PoseNumber);
+        //Debug.Log("time = " + time);
+
+    }
+
+    void Pose()
+    {
+        Debug.Log("Pose || PoseNumber:" + PoseNumber);
+        switch (PoseNumber)
         {
-            if( (joint_distance_array[3].y >= distance_Head.y - cal) && (joint_distance_array[3].y <= distance_Head.y + cal))
+            case 0: //お辞儀 日本
+                distinction_array[3] = new Vector3(0f, 3f, 0f);
+                distinction_array[9] = new Vector3(1.75f, -0.1f, 0f);
+                distinction_array[5] = new Vector3(-1.75f, -0.1f, 0f);
+                distinction_array[11] = new Vector3(0.2f, -0.2f, 0f);
+                distinction_array[7] = new Vector3(-0.2f, -0.2f, 0f);
+                break;
+
+            case 1: //手を合わせる　タイ
+                distinction_array[3] = new Vector3(0f, 3f, 0f);
+                distinction_array[9] = new Vector3(1.45f, -0.1f, 0f);
+                distinction_array[5] = new Vector3(-1.45f, -0.1f, 0f);
+                distinction_array[11] = new Vector3(0.1f, 0.65f, 0f);
+                distinction_array[7] = new Vector3(-0.1f, 0.65f, 0f);
+                break;
+
+            case 2: //気を付け　サンプル
+                distinction_array[3] = new Vector3(0f, 3f, 0f);
+                distinction_array[9] = new Vector3(1.55f, -0.6f, 0f);
+                distinction_array[5] = new Vector3(-1.55f, -0.6f, 0f);
+                distinction_array[11] = new Vector3(1.5f, -2.6f, 0f);
+                distinction_array[7] = new Vector3(-1.5f, -2.6f, 0f);
+                break;
+
+            case 3: //手を振る？　ハワイ
+                distinction_array[3] = new Vector3(0f, 3f, 0f);
+                distinction_array[9] = new Vector3(1.6f, 0.04f, 0f);
+                distinction_array[5] = new Vector3(-2.5f, 0.65f, 0f);
+                distinction_array[11] = new Vector3(1.3f, -2.5f, 0f);
+                distinction_array[7] = new Vector3(-2.25f, 2.5f, 0f);
+                break;
+
+            //case 4:
+            //    distinction_array[3] = new Vector3(0f, 3f, 0f);
+            //    distinction_array[9] = new Vector3(1.55f, -0.6f, 0f);
+            //    distinction_array[5] = new Vector3(-1.55f, -0.6f, 0f);
+            //    distinction_array[11] = new Vector3(1.5f, -2.6f, 0f);
+            //    distinction_array[7] = new Vector3(-1.5f, -2.6f, 0f);
+            //    break;
+
+            default:
+                break;
+        }
+    }
+
+    void Pose_is_Good()
+    {
+        //Head JointCount3　正誤判定
+        if ((joint_distance_array[3].x >= distinction_array[3].x - cal) && (joint_distance_array[3].x <= distinction_array[3].x + cal))
+        {
+            if ((joint_distance_array[3].y >= distinction_array[3].y - cal) && (joint_distance_array[3].y <= distinction_array[3].y + cal))
             {
                 HeadFlag = true;
-                Text_Head.SetActive(true);
+                //Text_Head.SetActive(true);
             }
         }
         else
         {
             HeadFlag = false;
-            Text_Head.SetActive(false);
+            //Text_Head.SetActive(false);
         }
-
-        ////正誤判定　SholderRight 8
-        //if ((joint_distance_array[8].x >= distance_SholderRight.x - cal) && (joint_distance_array[8].x <= distance_SholderRight.x + cal))
-        //{
-        //    if ((joint_distance_array[8].y >= distance_SholderRight.y - cal) && (joint_distance_array[8].y <= distance_SholderRight.y + cal))
-        //    {
-        //        SholderRightFlag = true;
-        //    }
-        //}
-        //else
-        //{
-        //    SholderRightFlag = false;
-        //}
-
-        ////正誤判定　SholderLeft 4
-        //if ((joint_distance_array[4].x >= distance_SholderLeft.x - cal) && (joint_distance_array[4].x <= distance_SholderLeft.x + cal))
-        //{
-        //    if ((joint_distance_array[4].y >= distance_SholderLeft.y - cal) && (joint_distance_array[4].y <= distance_SholderLeft.y + cal))
-        //    {
-        //        SholderLeftFlag = true;
-        //    }
-        //}
-        //else
-        //{
-        //    SholderLeftFlag = false;
-        //}
-
-        //正誤判定　ElbowRight 9
-        if ((joint_distance_array[9].x >= distance_ElbowRight.x - cal) && (joint_distance_array[9].x <= distance_ElbowRight.x + cal))
+        
+        //ElbowRight JointCount9 正誤判定
+        if ((joint_distance_array[9].x >= distinction_array[9].x - cal) && (joint_distance_array[9].x <= distinction_array[9].x + cal))
         {
-            if ((joint_distance_array[9].y >= distance_ElbowRight.y - cal) && (joint_distance_array[9].y <= distance_ElbowRight.y + cal))
+            if ((joint_distance_array[9].y >= distinction_array[9].y - cal) && (joint_distance_array[9].y <= distinction_array[9].y + cal))
             {
                 ElbowRightFlag = true;
-                Text_ElowRight.SetActive(true);
+               // Text_ElowRight.SetActive(true);
             }
         }
         else
         {
             ElbowRightFlag = false;
-            Text_ElowRight.SetActive(false);
+            //Text_ElowRight.SetActive(false);
         }
 
-        //正誤判定　ElbowLeft 5
-        if ((joint_distance_array[5].x >= distance_ElbowLeft.x - cal) && (joint_distance_array[5].x <= distance_ElbowLeft.x + cal))
+        //ElbowLeft JointCount5 正誤判定
+        if ((joint_distance_array[5].x >= distinction_array[5].x - cal) && (joint_distance_array[5].x <= distinction_array[5].x + cal))
         {
-            if ((joint_distance_array[5].y >= distance_ElbowLeft.y - cal) && (joint_distance_array[5].y <= distance_ElbowLeft.y + cal))
+            if ((joint_distance_array[5].y >= distinction_array[5].y - cal) && (joint_distance_array[5].y <= distinction_array[5].y + cal))
             {
                 ElbowLeftFlag = true;
-                Text_ElowLeft.SetActive(true);
+                //Text_ElowLeft.SetActive(true);
             }
         }
         else
         {
             ElbowLeftFlag = false;
-            Text_ElowLeft.SetActive(false);
+            //Text_ElowLeft.SetActive(false);
         }
 
-        //正誤判定　HandRight 11
-        if ((joint_distance_array[11].x >= distance_HandRight.x - cal) && (joint_distance_array[11].x <= distance_HandRight.x + cal))
+        //HandRight JointCount11正誤判定
+        if ((joint_distance_array[11].x >= distinction_array[11].x - cal) && (joint_distance_array[11].x <= distinction_array[11].x + cal))
         {
-            if ((joint_distance_array[11].y >= distance_HandRight.y - cal) && (joint_distance_array[11].y <= distance_HandRight.y + cal))
+            if ((joint_distance_array[11].y >= distinction_array[11].y - cal) && (joint_distance_array[11].y <= distinction_array[11].y + cal))
             {
                 HandRightFlag = true;
-                Text_HandRight.SetActive(true);
-                Debug.Log("HandRight is good");
+               // Text_HandRight.SetActive(true);
             }
         }
         else
-        {   
+        {
             HandRightFlag = false;
-            Text_HandRight.SetActive(false);
+           // Text_HandRight.SetActive(false);
         }
 
-        //正誤判定　HandLeft 7
-        if ((joint_distance_array[7].x >= distance_HandLeft.x - cal) && (joint_distance_array[7].x <= distance_HandLeft.x + cal))
+        //HandLeft JointCount7 正誤判定
+        if ((joint_distance_array[7].x >= distinction_array[7].x - cal) && (joint_distance_array[7].x <= distinction_array[7].x + cal))
         {
-            if ((joint_distance_array[7].y >= distance_HandLeft.y - cal) && (joint_distance_array[7].y <= distance_HandLeft.y + cal))
+            if ((joint_distance_array[7].y >= distinction_array[7].y - cal) && (joint_distance_array[7].y <= distinction_array[7].y + cal))
             {
                 HandLeftFlag = true;
-                Text_HandLeft.SetActive(true);
+               // Text_HandLeft.SetActive(true);
             }
         }
         else
         {
             HandLeftFlag = false;
-            Text_HandLeft.SetActive(false);
+           // Text_HandLeft.SetActive(false);
         }
 
         //各関節の位置の正誤判定が全部正しいかどうかtextを表示非表示
         if (HeadFlag == true && HandRightFlag == true && HandLeftFlag == true && ElbowRightFlag == true && ElbowLeftFlag == true)
         {
-            Text_All_Good.SetActive(true);           
+            Text_All_Good.SetActive(true);
+            
+            //最初のGoog判定の時間を格納　二回目以降リセットを防ぐ
+            if (GoodFlag == false)
+            {
+                goodtime = time;
+                GoodFlag = true;
+            }
         }
-        else
+    }
+
+    void timepast()
+    {
+        if((time - goodtime) >= 3 || time >= LimitTime)
         {
-            Text_All_Good.SetActive(false);
+            goodtime = 100;
+            time = 0;
+            GoodFlag = false;
+
+            if(PoseNumber <= 2)
+            {
+                Text_All_Good.SetActive(false);
+                Button.GetComponent<ChangeCanvas>().OnClick();
+            }
+            else
+            {   
+                Text_All_Good.SetActive(false);
+                ModeSelect.GetComponent<ChangeScene>().OnClick();
+            }
+
+            PoseNumber++;
+            ChangeImage();
         }
+    }
+
+    //制限時間を表示する
+    void OutputTime()
+    {
+        Text outtext = TimeText.GetComponent<Text>();
+        outtext.text = OutTime.ToString();
+    }
+
+    //画像の変更
+    void ChangeImage()
+    {
+        Debug.Log("change Image || PoseNumber:" + PoseNumber);
+        switch (PoseNumber)
+        {
+            case 0:
+                ImageObj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Sample1");
+                break;
+            case 1:
+                ImageObj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Sample2");
+                break;
+            case 2:
+                ImageObj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Sample3");
+                break;
+            case 3:
+                ImageObj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Sample4");
+                break;
+            default:
+                break;
+        }
+        
     }
 }

@@ -10,10 +10,8 @@ public class ChangeCanvas : MonoBehaviour
 
     public void OnClick()
     {
-        //SceneManager.LoadScene("GreetingView");
-        now_canvas.SetActive(false);
         next_canvas.SetActive(true);
-        Debug.Log("clicked");
+        now_canvas.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
