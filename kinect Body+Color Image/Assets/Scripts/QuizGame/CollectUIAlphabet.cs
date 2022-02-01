@@ -18,7 +18,7 @@ public class CollectUIAlphabet : MonoBehaviour
 
     public Vector3 Localpos;
 
-    public float velocity = 5.0f;
+    public float velocity = 3.0f;
 
     public string Alphabet;
 
@@ -78,7 +78,7 @@ public class CollectUIAlphabet : MonoBehaviour
         else/*触られた時*/
         {
 
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
         /*アルファベットのUI内部にマウス→取得判定*/
@@ -88,7 +88,7 @@ public class CollectUIAlphabet : MonoBehaviour
             if (TimeCount > 1.0f)//1秒以上なら
             {
                 TimeCount = 0;
-                script.AnsweredFlag = 0;//回答権の復活
+                //script.AnsweredFlag = 0;//回答権の復活
                 GameObject AnswerText = GameObject.Find("Answer");
                 Text Answer = AnswerText.GetComponent<Text>();
                 Answer.text = "";//回答欄を空欄に
@@ -97,6 +97,11 @@ public class CollectUIAlphabet : MonoBehaviour
         else
         {
             GetAlphabet();
+        }
+
+        if(script.SceneMoveFlag == 1)
+        {
+            Destroy(this.gameObject);
         }
 
     }
@@ -143,7 +148,7 @@ public class CollectUIAlphabet : MonoBehaviour
             Text Answer = AnswerText.GetComponent<Text>();
             Answer.text += Alphabet;
 
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 

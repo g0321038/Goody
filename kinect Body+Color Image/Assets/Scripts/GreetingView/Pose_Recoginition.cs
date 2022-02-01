@@ -17,6 +17,10 @@ public class Pose_Recoginition : MonoBehaviour
     public GameObject TimeText;
     public GameObject ImageObj;
 
+    public AudioClip sound; //SE音源
+
+    private AudioSource audioSource; //音源コンポーネント
+
     private int PoseNumber = 0;
 
     //時間用変数
@@ -53,11 +57,13 @@ public class Pose_Recoginition : MonoBehaviour
     private bool HandRightFlag; //jointcount:11
     private bool HandLeftFlag; //jointcount:7
 
+    private int SoundFlag = 0;
     // Start is called before the first frame update
     void Start()
     {
         goodtime = 100;
         ChangeImage();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -105,8 +111,8 @@ public class Pose_Recoginition : MonoBehaviour
                 distinction_array[3] = new Vector3(0f, 3f, 0f);
                 distinction_array[9] = new Vector3(1.75f, -0.1f, 0f);
                 distinction_array[5] = new Vector3(-1.75f, -0.1f, 0f);
-                distinction_array[11] = new Vector3(0.2f, -0.2f, 0f);
-                distinction_array[7] = new Vector3(-0.2f, -0.2f, 0f);
+                distinction_array[11] = new Vector3(0.2f, -1.0f, 0f);
+                distinction_array[7] = new Vector3(-0.2f, -1.0f, 0f);
                 break;
 
             case 1: //手を合わせる　タイ
@@ -119,10 +125,10 @@ public class Pose_Recoginition : MonoBehaviour
 
             case 2: //気を付け　サンプル
                 distinction_array[3] = new Vector3(0f, 3f, 0f);
-                distinction_array[9] = new Vector3(1.55f, -0.6f, 0f);
-                distinction_array[5] = new Vector3(-1.55f, -0.6f, 0f);
-                distinction_array[11] = new Vector3(1.5f, -2.6f, 0f);
-                distinction_array[7] = new Vector3(-1.5f, -2.6f, 0f);
+                distinction_array[9] = new Vector3(1.5f, 0.13f, 0f);
+                distinction_array[5] = new Vector3(-0.5f, -0.02f, 0f);
+                distinction_array[11] = new Vector3(1f, 1.4f, 0f);
+                distinction_array[7] = new Vector3(1f, 1.4f, 0f);
                 break;
 
             case 3: //手を振る？　ハワイ
@@ -169,7 +175,7 @@ public class Pose_Recoginition : MonoBehaviour
             if ((joint_distance_array[9].y >= distinction_array[9].y - cal) && (joint_distance_array[9].y <= distinction_array[9].y + cal))
             {
                 ElbowRightFlag = true;
-               // Text_ElowRight.SetActive(true);
+                //Text_ElowRight.SetActive(true);
             }
         }
         else
@@ -184,7 +190,7 @@ public class Pose_Recoginition : MonoBehaviour
             if ((joint_distance_array[5].y >= distinction_array[5].y - cal) && (joint_distance_array[5].y <= distinction_array[5].y + cal))
             {
                 ElbowLeftFlag = true;
-                //Text_ElowLeft.SetActive(true);
+               // Text_ElowLeft.SetActive(true);
             }
         }
         else
@@ -199,13 +205,13 @@ public class Pose_Recoginition : MonoBehaviour
             if ((joint_distance_array[11].y >= distinction_array[11].y - cal) && (joint_distance_array[11].y <= distinction_array[11].y + cal))
             {
                 HandRightFlag = true;
-               // Text_HandRight.SetActive(true);
+                //Text_HandRight.SetActive(true);
             }
         }
         else
         {
             HandRightFlag = false;
-           // Text_HandRight.SetActive(false);
+            //Text_HandRight.SetActive(false);
         }
 
         //HandLeft JointCount7 正誤判定
@@ -214,20 +220,28 @@ public class Pose_Recoginition : MonoBehaviour
             if ((joint_distance_array[7].y >= distinction_array[7].y - cal) && (joint_distance_array[7].y <= distinction_array[7].y + cal))
             {
                 HandLeftFlag = true;
-               // Text_HandLeft.SetActive(true);
+                //Text_HandLeft.SetActive(true);
             }
         }
         else
         {
             HandLeftFlag = false;
-           // Text_HandLeft.SetActive(false);
+            //Text_HandLeft.SetActive(false);
         }
 
         //各関節の位置の正誤判定が全部正しいかどうかtextを表示非表示
         if (HeadFlag == true && HandRightFlag == true && HandLeftFlag == true && ElbowRightFlag == true && ElbowLeftFlag == true)
         {
             Text_All_Good.SetActive(true);
+
+            //GoodSEを鳴らす
+            if(SoundFlag == 0)
+            {
+                audioSource.PlayOneShot(sound);
+                SoundFlag = 1;
+            }
             
+
             //最初のGoog判定の時間を格納　二回目以降リセットを防ぐ
             if (GoodFlag == false)
             {
@@ -255,7 +269,7 @@ public class Pose_Recoginition : MonoBehaviour
                 Text_All_Good.SetActive(false);
                 ModeSelect.GetComponent<ChangeScene>().OnClick();
             }
-
+            SoundFlag = 0;
             PoseNumber++;
             ChangeImage();
         }
