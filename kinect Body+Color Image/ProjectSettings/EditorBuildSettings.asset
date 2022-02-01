@@ -18,14 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/QuizGame1.unity
     guid: 7fe41019895e89d45a7128fc15d682f3
   - enabled: 0
-    path: Assets/Scenes/Sample/QuizScene.unity
-    guid: d4742211969f23e4d9abf5eb8ae8ae62
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/360image.unity
     guid: 8bfd32bc63ab7614381581fc155eacb2
-  - enabled: 1
-    path: Assets/Scenes/Result.unity
-    guid: 58db4982e237da344aad1680471a25a3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 99f592af53070084688810e90081cde1
